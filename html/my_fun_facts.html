@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strachan Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png" />
+  </head>
+
+  <body>
+    <!-- header / navbar -->
+    <header>
+      <!-- logo / branding -->
+      <h2>Sample Portfolio</h2>
+
+      <!-- navigation -->
+      <div class="navigation">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/html/my_resume.html">Resume</a></li>
+          <li><a href="/html/my_fun_facts.html">Fun Facts</a></li>
+        </ul>
+      </div>
+
+      <!-- call to action contact button -->
+      <button class="contact-button">
+        <a href="mailto:sample@gmail.com">Contact</a>
+      </button>
+    </header>
+
+    <main>
+      <h2>Some Fun Facts About Me</h2>
+
+      <!-- start of book section arranged into columns -->
+      <section class="favorite-book">
+        <h3>Favorite Book</h3>
+
+        <!-- left column -->
+        <div class="book-img-left">
+          <!-- WIDTH AND HEIGHT STYLING ONLY ADDED TEMPERARLY TO MAKE WEBPAGE LOOK DECENT BEFORE STYLING. THEY WILL BE REMOVED AFTER -->
+          <img
+            src="/assets/img/sample_book.jpg"
+            width="170"
+            height="300"
+            alt="broken image"
+          />
+        </div>
+
+        <!-- right column -->
+        <div class="book-right">
+          <h4>Hamlet</h4>
+          <p>
+            It's so well referenced for a reason. Great text and incredible
+            drama. With most types of media, there's something special about
+            interacting with something so widely loved as it helps you
+            understand everything that was inspired by it to a greater degree.
+          </p>
+          <a
+            href="https://www.barnesandnoble.com/w/hamlet-william-shakespeare/1116670752?ean=9780743477123"
+            >Get it here!</a
+          >
+        </div>
+      </section>
+
+      <!-- start of audio section also arranged into columns -->
+      <section class="favorite-audio">
+        <h3>Favorite Audio</h3>
+
+        <!-- left column -->
+        <div class="audio-desc-left">
+          <h4>Shigeru Suzuki's Coral Reef</h4>
+          <!-- link opens in a new tab -->
+          <a
+            href="https://youtu.be/-5-kykUC-Zw?si=ORDAXZKfx-W1YNBG"
+            target="_blank"
+            type="audio/mpeg"
+            >(Here is the link to it on Youtube)</a
+          >
+        </div>
+
+        <!-- right column (image of album with audio track under it)-->
+        <div class="audio right">
+          <!-- WIDTH AND HEIGHT STYLING ONLY ADDED TEMPERARLY TO MAKE WEBPAGE LOOK DECENT BEFORE STYLING. THEY WILL BE REMOVED AFTER -->
+          <img
+            src="/assets/img/album_cover.jpg"
+            width="300"
+            height="300"
+            alt="Image Broken"
+          />
+          <audio controls>
+            <source src="/assets/audio/coral_reef.mp3" />
+            Unsupported Audio, Sorry.
+          </audio>
+        </div>
+      </section>
+
+      <!-- start of the video section (not placed into columns) -->
+      <section class="videos">
+        <h3>Favorite Video</h3>
+        <div class="video-itself">
+          <h4>1 Hour Beautiful Freshwater Aquarium • Discus Fish Tank • Schooling Fish!!!!</h4>
+          <!-- iframe used to embed youtube video -->
+          <!-- WIDTH AND HEIGHT STYLING ONLY ADDED TEMPERARLY TO MAKE WEBPAGE LOOK DECENT BEFORE STYLING. THEY WILL BE REMOVED AFTER -->
+          <iframe
+            src="https://www.youtube.com/embed/s0T9QjUbMRo?si=hI-uMo1OUIgizZsJ"
+            width="500"
+            height="300"•
+            title="YouTube video player"
+            >Video Broken, Sorry
+          </iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- line to seperate footer from the rest of the page -->
+      <hr />
+
+      <!-- footer columns -->
+      <div class="footer-columns">
+        <!-- final call to action button -->
+        <h5>Get in Touch</h5>
+        <button class="contact-button">
+          <a href="mailto:sample@gmail.com">Contact</a>
+        </button>
+
+        <!-- social medias -->
+        <div class="socials">
+          <h5>Social Media</h5>
+          <ul>
+            <!-- target="_blank" used to open these links in a new tab as to not take the user away from the portfolio -->
+            <li>
+              <a href="https://github.com/tx55" target="_blank">GitHub</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" target="_blank">Linkedin</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/" target="_blank">Youtube</a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com/" target="_blank">Twitter</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- links to other pages -->
+        <div class="navigation-footer">
+          <h5>Explore More.?</h5>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/html/my_resume.html">Resume</a></li>
+            <li><a href="/html/my_fun_facts.html">Fun Facts</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
