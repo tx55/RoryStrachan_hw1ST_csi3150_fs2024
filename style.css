@@ -117,43 +117,73 @@ header > h2 {
 /* styling for hero section */
 
 .hero {
-    height: 640px;
-    padding: 50px 200px;
+  height: 640px;
+  padding: 50px 200px;
 }
 
 .hero-columns {
-    padding: 50px 50px;
-    height: 640 px;
-    display: flex;
-    justify-content: space-between;
-    gap: 80px;
+  padding: 50px 50px;
+  height: 640 px;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
 }
 
 .hero-columns .hero-right-column h1 {
-    font-size: 32px;
-    font-weight: 600;
-    color: var(--font-color-primary);
-    margin-bottom: 35px;
-}
-
-.hero-columns .hero-right-column h4 {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--font-color-primary);
-    margin-bottom: 35px;
-}
-
-.hero-columns .hero-left-column {
-    width: 30%;
-}
-
-.hero-columns .hero-left-column img {
-    height: 400px;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--font-color-primary);
+  margin-bottom: 35px;
 }
 
 .hero-columns .hero-right-column blockquote {
-    padding-right: 20px;
-    font-size: 24px;
-    font-weight: 400;
-    color: var(--font-color-primary);
+  padding-right: 20px;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--font-color-primary);
+  margin-bottom: 35px;
+}
+
+.hero-columns .hero-right-column button {
+  background: transparent;
+  border: 1px solid var(--font-color-primary);
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 2px;
+
+  /* code to do a linear color transition */
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    var(--font-color-primary),
+    var(--font-color-primary) 50%,
+    transparent 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: all 0.3s ease;
+}
+
+.hero-columns .hero-right-column button:hover {
+  background-position: 0 100%;
+}
+
+.hero-columns .hero-right-column button a {
+  text-decoration: none;
+  font-size: 24px;
+  color: var(--font-color-primary);
+  transition: all 0.3s ease;
+}
+
+.hero-columns .hero-right-column button:hover a{
+  color: var(--bg-primary);
+}
+
+.hero-columns .hero-left-column {
+  width: 30%;
+}
+
+.hero-columns .hero-left-column img {
+  height: 400px;
 }
