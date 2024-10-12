@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+  /* supress browser defaults and select alt box model */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif, Tahoma;
+  /* set variables for colors */
+  --bg-primary: #111111;
+  --bg-secondary: #7356b0;
+  --font-color-primary: #f4f4f9;
+  --font-color-secondary: #9ba4e7;
+  --backup-color: #6d5eb8;
+}
+
+body {
+  height: 100vh;
+  background: var(--bg-primary);
+}
+
+/* style the header / navbar */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px; /*might need change based on screen used to develop*/
+  padding: 0 50px;
+}
+
+header > h2 {
+  color: var(--font-color-primary);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.left-side-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 25%;
+}
+
+.left-side-header .navigation ul {
+  display: flex;
+}
+
+.left-side-header .navigation ul li {
+  list-style: none;
+}
+
+.left-side-header .navigation ul li a {
+  text-decoration: none;
+  color: var(--font-color-secondary);
+  font-size: 20px;
+  margin-right: 25px;
+
+  /* code to do a linear color transition */
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    var(--font-color-primary),
+    var(--font-color-primary) 50%,
+    var(--font-color-secondary) 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 0.3s ease;
+}
+
+.left-side-header .navigation ul li:hover a {
+  background-position: 0 100%;
+}
+
+.left-side-header .navigation ul li:last-child a {
+  margin-right: 0;
+}
+
+.left-side-header p {
+  color: var(--font-color-primary);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.left-side-header .contact-button {
+  background: var(--backup-color);
+  color: var(--font-color-primary);
+  padding: 6px 16px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 2px;
+
+  /* code to do a linear color transition */
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    var(--font-color-secondary),
+    var(--font-color-secondary) 50%,
+    var(--backup-color) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: all 0.3s ease;
+}
+
+.left-side-header .contact-button:hover {
+  background-position: 0 100%;
+  color: var(--bg-primary);
+}
+
+/* styling for hero section */
+
+.hero {
+    height: 640px;
+    padding: 50px 200px;
+}
+
+.hero-columns {
+    padding: 50px 50px;
+    height: 640 px;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.hero-columns .hero-right-column h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--font-color-primary);
+    margin-bottom: 35px;
+}
+
+.hero-columns .hero-right-column h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--font-color-primary);
+    margin-bottom: 35px;
+}
+
+.hero-columns .hero-left-column {
+    width: 30%;
+}
+
+.hero-columns .hero-left-column img {
+    height: 400px;
+}
+
+.hero-columns .hero-right-column blockquote {
+    padding-right: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--font-color-primary);
+}
