@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
+/* animation to fade page elements in on page load */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 * {
   /* supress browser defaults and select alt box model */
   margin: 0;
@@ -12,6 +23,8 @@
   --font-color-primary: #f4f4f9;
   --font-color-secondary: #9ba4e7;
   --backup-color: #6d5eb8;
+
+  animation: 1s ease-out 0s 1 fadeIn;
 }
 
 body {
@@ -21,6 +34,7 @@ body {
 
 /* style the header / navbar */
 header {
+  /* setting flex for the nav bar items */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,28 +42,32 @@ header {
   padding: 0 50px;
 }
 
-header > h2 {
+/* nav bar item logo */
+header h2 {
   color: var(--font-color-primary);
   font-size: 30px;
   font-weight: 700;
 }
 
-.left-side-header {
+/* container that holds nav bar and button so both can stay near eachother (preventing navbar from being directly in the top center */
+.right-side-header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 25%;
 }
 
-.left-side-header .navigation ul {
+.right-side-header .navigation ul {
+  /* flex to have items aligned in a row */
   display: flex;
+  margin-right: 10px;
 }
 
-.left-side-header .navigation ul li {
+.right-side-header .navigation ul li {
   list-style: none;
 }
 
-.left-side-header .navigation ul li a {
+.right-side-header .navigation ul li a {
   text-decoration: none;
   color: var(--font-color-secondary);
   font-size: 20px;
@@ -72,26 +90,28 @@ header > h2 {
   transition: background-position 0.3s ease;
 }
 
-.left-side-header .navigation ul li:hover a {
+/* linear color transition */
+.right-side-header .navigation ul li:hover a {
   background-position: 0 100%;
 }
 
-.left-side-header .navigation ul li:last-child a {
+.right-side-header .navigation ul li:last-child a {
   margin-right: 0;
 }
 
-.left-side-header p {
+/* divider between nav bar and button */
+.right-side-header p {
   color: var(--font-color-primary);
   font-size: 25px;
   font-weight: 700;
+  margin-right: 10px;
 }
 
-.left-side-header .contact-button {
+/* header bar button */
+.right-side-header > button {
   background: var(--backup-color);
-  color: var(--font-color-primary);
   padding: 6px 16px;
   border: none;
-  font-size: 18px;
   cursor: pointer;
   border-radius: 2px;
 
@@ -109,24 +129,43 @@ header > h2 {
   transition: all 0.3s ease;
 }
 
-.left-side-header .contact-button:hover {
+/* header bar button hover transition*/
+.right-side-header > button:hover {
   background-position: 0 100%;
   color: var(--bg-primary);
 }
 
-/* styling for hero section */
+.right-side-header > button a {
+  color: var(--font-color-primary);
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* header bar button hover transition for the button text*/
+.right-side-header > button:hover a {
+  color: var(--bg-primary);
+}
+
+/* styling for hero section (first page) */
 
 .hero {
   height: 640px;
-  padding: 50px 200px;
+  margin-top: 200px;
 }
 
+/* setting the hero section into two columns. one for text the other for an image */
 .hero-columns {
-  padding: 50px 50px;
   height: 640 px;
   display: flex;
-  justify-content: space-between;
-  gap: 80px;
+  justify-content: space-evenly;
+}
+
+.hero-columns .hero-right-column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .hero-columns .hero-right-column h1 {
@@ -136,28 +175,37 @@ header > h2 {
   margin-bottom: 35px;
 }
 
+/* color added to span to create altering colors inline */
+.hero-columns .hero-right-column h1 span {
+  color: var(--font-color-secondary);
+  text-decoration: underline;
+}
+
 .hero-columns .hero-right-column blockquote {
+  /* indent added for quote */
   padding-right: 20px;
   font-size: 24px;
   font-weight: 400;
   color: var(--font-color-primary);
+  margin-left: 30px;
   margin-bottom: 35px;
 }
 
-.hero-columns .hero-right-column button {
+.hero-columns .hero-right-column .resume {
   background: transparent;
-  border: 1px solid var(--font-color-primary);
+  border: 1px solid var(--font-color-secondary);
   cursor: pointer;
   padding: 8px 20px;
   border-radius: 2px;
+  width: 200px;
 
   /* code to do a linear color transition */
   position: relative;
   overflow: hidden;
   background: linear-gradient(
     to right,
-    var(--font-color-primary),
-    var(--font-color-primary) 50%,
+    var(--bg-secondary),
+    var(--bg-secondary) 50%,
     transparent 50%
   );
   background-size: 200% 100%;
@@ -165,18 +213,21 @@ header > h2 {
   transition: all 0.3s ease;
 }
 
-.hero-columns .hero-right-column button:hover {
+/* transition for button */
+.hero-columns .hero-right-column .resume:hover {
   background-position: 0 100%;
+  border-color: var(--bg-secondary);
 }
 
-.hero-columns .hero-right-column button a {
+.hero-columns .hero-right-column .resume a {
   text-decoration: none;
   font-size: 24px;
-  color: var(--font-color-primary);
+  color: var(--font-color-secondary);
   transition: all 0.3s ease;
 }
 
-.hero-columns .hero-right-column button:hover a{
+/* transition for text on button */
+.hero-columns .hero-right-column .resume:hover a {
   color: var(--bg-primary);
 }
 
@@ -186,4 +237,62 @@ header > h2 {
 
 .hero-columns .hero-left-column img {
   height: 400px;
+}
+
+/* styling for overview section (first page) */
+
+.section-title {
+  margin: 10px 50px 30px;
+  padding: 5px 5px;
+  background: rgba(255, 255, 255, 0.08);
+  display: inline-block;
+  color: var(--font-color-secondary);
+  border-radius: 2px;
+  font-size: 30px;
+}
+
+.overview {
+  padding: 0 50px;
+  display: flex;
+  gap: 80px;
+  margin-bottom: 50px;
+}
+
+.overview .overview-right img {
+  height: 500px;
+}
+
+.overview .overview-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.overview .overview-left .set-of-cols {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview .overview-left h4 {
+  color: var(--font-color-primary);
+  font-size: 22px;
+}
+
+.overview .overview-left progress {
+  color: var(--font-color-primary);
+  border-radius: 2px;
+  width: 25%;
+}
+
+.overview .overview-left a {
+  color: var(--font-color-secondary);
+  font-size: 30px;
+  text-decoration: none;
+  transition: padding 0.3s ease;
+  display: inline;
+}
+
+/* slightly moves text on hover */
+.overview .overview-left a:hover {
+  padding-left: 50px;
 }

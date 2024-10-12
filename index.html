@@ -15,11 +15,11 @@
       <!-- logo / branding -->
       <h2>Sample Portfolio</h2>
 
-      <div class="left-side-header">
+      <div class="right-side-header">
         <!-- navigation -->
         <div class="navigation">
           <ul>
-            <li><a class="default" href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="./html/my_resume.html">Resume</a></li>
             <li><a href="./html/my_fun_facts.html">Fun Facts</a></li>
           </ul>
@@ -29,7 +29,7 @@
         <p>|</p>
 
         <!-- call to action contact button -->
-        <button class="contact-button">Contact</button>
+        <button><a href="mailto:sample@gmail.com">Contact</a></button>
       </div>
     </header>
 
@@ -38,7 +38,7 @@
       <section class="hero">
         <div class="hero-columns">
           <div class="hero-right-column">
-            <h1>Rory Strachan Portfolio Website</h1>
+            <h1>Portfolio Website <span>John Doe</span></h1>
             <!-- blockquote used to create indent -->
             <blockquote>
               <h3>
@@ -48,54 +48,58 @@
                 joy and sorrow... these are the things I will pass on."
               </h3>
             </blockquote>
-              <button type="button"><a href="./assets/other/sample.pdf" download="GFG">Resume</button></a>
+            <button class="resume" type="button">
+              <a href="./assets/other/sample.pdf" download="GFG">Resume</a>
+            </button>
           </div>
           <!-- left column for image -->
           <div class="hero-left-column">
             <!-- sample profile photo used-->
-            <img src="./assets/img/sample_profile.jpeg" alt="" />
+            <img src="./assets/img/sample_profile.jpg" alt="" />
           </div>
         </div>
       </section>
 
-      <!-- right column for a general overview -->
+      <h3 class="section-title">Overview</h3>
+
+      <!-- overview section is organized into two columns -->
       <div class="overview">
-        <h4>
-          Hello, my name is Rory Strachan. I am a student at Oakland University
-          working towards a Bachelor's degree in Computer Science and a minor in
-          Applied Math. I am in my third year of University and I am about 80%
-          through my degree.
-        </h4>
+        <div class="overview-right">
+          <img src="./assets/img/sample_profile.jpeg" alt="" />
+        </div>
 
-        <!-- progress bar flair -->
-        <label for="file"><h4>Current Progress Towards My Degree:</h4></label>
-        <progress id="file" value="95" max="128"></progress>
+        <div class="overview-left">
 
-        <h4>
-          I am most proficient with Java, but I also know C, Javascript, HTML,
-          and CSS. I currently have a University job, but I hope to have a job
-          as a software developer.
-        </h4>
+          <div class="set-of-cols">
+            <div class="col-1">
+              <h4>
+                Hello, my name is Rory Strachan. I am a student at Oakland
+                University working towards a Bachelor's degree in Computer Science
+                and a minor in Applied Math. I am in my third year of University and
+                I am about 80% through my degree.
+              </h4>
+    
+              <!-- progress bar flair -->
+              <label for="file"><h4>Current Progress Towards My Degree:</h4></label>
+              <progress id="file" value="95" max="128"></progress>
+            </div>
+  
+            <div class="col-2">
+              <h4>
+                I am most proficient with Java, but I also know C, Javascript, HTML,
+                and CSS. I currently have a University job, but I hope to have a job
+                as a software developer.
+              </h4>
+            </div>
+          </div>
 
-        <!-- sample text for spacing -->
-        <h4>
-          Ipsam tenetur, vitae maxime dignissimos pariatur maiores? Eos
-          aspernatur dolorum pariatur illo magni unde, cum ducimus. Odio id quia
-          fugiat molestiae quos. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Asperiores vero obcaecati excepturi quis, facilis
-          doloribus accusamus earum provident itaque ratione rem repellendus hic
-          enim suscipit officia labore, quo assumenda? Voluptatibus! Lorem ipsum
-          dolor sit amet consectetur, adipisicing elit. Molestias velit ipsam
-          ipsa quis incidunt harum perferendis doloribus quo ducimus, iure cum
-          magnam possimus expedita officia magni error impedit repellat
-          voluptatum.
-        </h4>
+          <h4>To know more about me please vist my other pages:</h4>
 
-        <h4>
-          To know more about me please vist my
-          <a href="./html/my_resume.html">Resume</a> page or my
-          <a href="./html/my_fun_facts.html">Fun Facts</a> page
-        </h4>
+          <!-- these elements move slightly when they are hovered over.
+           they are wrapped in span tags so the use has to be directly hovering over them for them to move -->
+          <span><a href="./html/my_resume.html">> Resume</a></span>
+          <span></span><a href="./html/my_fun_facts.html">> Fun Facts</a></span>
+        </div>
       </div>
     </main>
 
