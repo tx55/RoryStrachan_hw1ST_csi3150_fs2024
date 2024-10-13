@@ -47,27 +47,26 @@ header h2 {
   color: var(--font-color-primary);
   font-size: 30px;
   font-weight: 700;
+  flex-basis: 4;
 }
 
-/* container that holds nav bar and button so both can stay near eachother (preventing navbar from being directly in the top center */
-.right-side-header {
+header .right-side-header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 25%;
 }
 
-.right-side-header .navigation ul {
+header .navigation ul {
   /* flex to have items aligned in a row */
   display: flex;
   margin-right: 10px;
 }
 
-.right-side-header .navigation ul li {
+header .navigation ul li {
   list-style: none;
 }
 
-.right-side-header .navigation ul li a {
+header .navigation ul li a {
   text-decoration: none;
   color: var(--font-color-secondary);
   font-size: 20px;
@@ -91,16 +90,16 @@ header h2 {
 }
 
 /* linear color transition */
-.right-side-header .navigation ul li:hover a {
+header .navigation ul li:hover a {
   background-position: 0 100%;
 }
 
-.right-side-header .navigation ul li:last-child a {
+header .navigation ul li:last-child a {
   margin-right: 0;
 }
 
 /* divider between nav bar and button */
-.right-side-header p {
+header p {
   color: var(--font-color-primary);
   font-size: 25px;
   font-weight: 700;
@@ -150,7 +149,7 @@ header h2 {
 /* styling for hero section (first page) */
 
 .hero {
-  height: 640px;
+  height: 500px;
   margin-top: 200px;
 }
 
@@ -188,6 +187,10 @@ header h2 {
   color: var(--font-color-primary);
   margin-left: 30px;
   margin-bottom: 35px;
+}
+
+.hero-columns .hero-left-column img {
+  width: 600px;
 }
 
 /* styles all resume buttons */
@@ -234,10 +237,6 @@ header h2 {
 
 .hero-columns .hero-left-column {
   width: 30%;
-}
-
-.hero-columns .hero-left-column img {
-  height: 400px;
 }
 
 /* styling for overview section (first page) */
@@ -483,7 +482,8 @@ header h2 {
 }
 
 /* book section */
-.favorite-book .book-cols, .favorite-audio .audio-cols {
+.favorite-book .book-cols,
+.favorite-audio .audio-cols {
   display: flex;
   justify-content: space-between;
   gap: 80px;
@@ -582,4 +582,32 @@ hr {
 /* linear color transition */
 .footer-columns ul li:hover a {
   background-position: 0 100%;
+}
+
+/* styling for differing screen sizes*/
+@media screen and (max-width: 1100px) {
+  .hero-columns {
+    align-items: center;
+  }
+
+  .hero-columns .hero-right-column h1 {
+    font-size: 24px;
+  }
+
+  .hero-columns .hero-right-column blockquote {
+    font-size: 22px;
+  }
+
+  .hero-columns .hero-left-column img {
+    width: 300px;
+  }
+
+  .resume {
+    width: 150px;
+  }
+
+  .resume a {
+    font-size: 18px;
+  }
+
 }
