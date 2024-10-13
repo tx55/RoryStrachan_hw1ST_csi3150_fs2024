@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Strachan Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png" />
 
     <link rel="stylesheet" href="../style.css" />
   </head>
@@ -29,7 +29,7 @@
         <p>|</p>
 
         <!-- call to action contact button -->
-        <button><a href="mailto:sample@gmail.com">Contact</a></button>
+        <button class="contact"><a href="mailto:sample@gmail.com">Contact</a></button>
       </div>
     </header>
 
@@ -39,132 +39,143 @@
         <!-- left column (contact information) -->
         <div class="resume-info-left">
           <h1>Rory Strachan - Resume</h1>
-          <h3>Contact</h3>
+          <h2>Contact</h2>
           <p>
             1234 Flower Street, 93702, CA<br />
             sample@gmail.com<br />
             +1 (123) 456-7890
           </p>
+          <div class="resume-objectives-right">
+            <h3>Objectives</h3>
+            <p>
+              Hoping to enter the industry and apply the skills I have learned
+              in school and my free time.
+            </p>
+          </div>
+          <button class="resume" type="button">
+            <a href="./assets/other/sample.pdf" download="GFG"
+              >Resume Download</a
+            >
+          </button>
         </div>
 
-        <!-- right column (objectives) -->
-        <div class="resume-objectives-right">
-          <h2>Objectives</h2>
-          <p>
-            Hoping to enter the industry and apply the skills I have learned in
-            school and my free time.
-          </p>
+        <!-- right column (objectives) work experiences-->
+
+        <div class="resume-info-right">
+          <section class="experiences">
+            <h2>Professional Experiences</h2>
+
+            <!-- first job -->
+            <div class="job-1">
+              <h3>01/24 -- Present, Director, Sample Company, Rochester, MI</h3>
+              <ul>
+                <li>
+                  Overhauled the previous system left by former management to
+                  reduce waste and be more productive.
+                </li>
+                <li>
+                  Contacted organizations and building managers on campus to
+                  change newspaper stand locations to be more effective.
+                </li>
+                <li>
+                  Formed spreadsheets from newspaper stand data to better
+                  routes.
+                </li>
+                <li>
+                  Provided instruction to others and created routes and
+                  routines.
+                </li>
+              </ul>
+            </div>
+
+            <!-- second job -->
+            <div class="job-2">
+              <h3>10/22 -- 12/23, Associate, Sample Company, Utica, MI</h3>
+              <ul>
+                <li>
+                  Researched and assessed the quality of items being sold by
+                  customers.
+                </li>
+                <li>
+                  Displayed and managed more expensive items kept behind glass
+                  cases.
+                </li>
+                <li>
+                  Informed customers about discounts and special offers and
+                  answered questions about rarer items.
+                </li>
+              </ul>
+            </div>
+
+            <!-- third job -->
+            <div class="job-3">
+              <h3>09/22 -- 10/22, Line Attendant, Sample Company, Lenox, MI</h3>
+              <ul>
+                <li>
+                  Set up a monitor for customers to view their line placement.
+                </li>
+                <li>
+                  Troubleshooted and fixed systems, monitors, small computers,
+                  and HDMI cords.
+                </li>
+                <li>
+                  Managed lines of people which sometimes had up to a thousand
+                  people waiting.
+                </li>
+              </ul>
+            </div>
+
+            <!-- fourth job -->
+            <div class="job-4">
+              <h3>
+                05/20 -- 09/22, Retail Assistant, Sample Company, Macomb, MI
+              </h3>
+              <ul>
+                <li>
+                  Enforced rules and regulations of recreational facilities to
+                  maintain discipline and ensure safety.
+                </li>
+                <li>
+                  Organized, led, and promoted interest in recreational
+                  activities such as arts, crafts, and games.
+                </li>
+                <li>Explained and demonstrated artistic techniques.</li>
+              </ul>
+            </div>
+          </section>
+          <!-- educational experiences arranged in a table -->
+          <section class="education">
+            <h2>Educational Experiences</h2>
+            <table>
+              <!-- table heading -->
+              <thead>
+                <tr>
+                  <th>Start -- End</th>
+                  <th>Degree</th>
+                </tr>
+              </thead>
+
+              <!-- table data (year | details) <br>s added to make information present nicer. may be removed after adding CSS-->
+
+              <!-- first table item -->
+              <tr>
+                <td>September 2024<br />-<br />June 2026</td>
+                <td>
+                  Bachelor's Degree Computer Science<br />Oakland University<br />Rochester,
+                  MI
+                </td>
+              </tr>
+
+              <!-- second table item -->
+              <tr>
+                <td>September 2019<br />-<br />June 200</td>
+                <td>
+                  High School Diploma<br />High School High<br />Utica, MI
+                </td>
+              </tr>
+            </table>
+          </section>
         </div>
-      </section>
-
-      <!-- start of work experiences -->
-      <section class="experiences">
-        <h2>Professional Experiences</h2>
-
-        <!-- first job -->
-        <div class="job-1">
-          <h3>01/24 -- Present, Director, Sample Company, Rochester, MI</h3>
-          <ul>
-            <li>
-              Overhauled the previous system left by former management to reduce
-              waste and be more productive.
-            </li>
-            <li>
-              Contacted organizations and building managers on campus to change
-              newspaper stand locations to be more effective.
-            </li>
-            <li>
-              Formed spreadsheets from newspaper stand data to better routes.
-            </li>
-            <li>
-              Provided instruction to others and created routes and routines.
-            </li>
-          </ul>
-        </div>
-
-        <!-- second job -->
-        <div class="job-2">
-          <h3>10/22 -- 12/23, Associate, Sample Company, Utica, MI</h3>
-          <ul>
-            <li>
-              Researched and assessed the quality of items being sold by
-              customers.
-            </li>
-            <li>
-              Displayed and managed more expensive items kept behind glass
-              cases.
-            </li>
-            <li>
-              Informed customers about discounts and special offers and answered
-              questions about rarer items.
-            </li>
-          </ul>
-        </div>
-
-        <!-- third job -->
-        <div class="job-3">
-          <h3>09/22 -- 10/22, Line Attendant, Sample Company, Lenox, MI</h3>
-          <ul>
-            <li>
-              Set up a monitor for customers to view their line placement.
-            </li>
-            <li>
-              Troubleshooted and fixed systems, monitors, small computers, and
-              HDMI cords.
-            </li>
-            <li>
-              Managed lines of people which sometimes had up to a thousand
-              people waiting.
-            </li>
-          </ul>
-        </div>
-
-        <!-- fourth job -->
-        <div class="job-4">
-          <h3>05/20 -- 09/22, Retail Assistant, Sample Company, Macomb, MI</h3>
-          <ul>
-            <li>
-              Enforced rules and regulations of recreational facilities to
-              maintain discipline and ensure safety.
-            </li>
-            <li>
-              Organized, led, and promoted interest in recreational activities
-              such as arts, crafts, and games.
-            </li>
-            <li>Explained and demonstrated artistic techniques.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- educational experiences arranged in a table -->
-      <section class="education">
-        <h2>Educational Experiences</h2>
-        <table>
-          <!-- table heading -->
-          <thead>
-            <tr>
-              <th>Start -- End</th>
-              <th>Degree</th>
-            </tr>
-          </thead>
-
-          <!-- table data (year | details) <br>s added to make information present nicer. may be removed after adding CSS-->
-
-          <!-- first table item -->
-          <tr>
-            <td>September 2024<br />-<br />June 2026</td>
-            <td>
-              Bachelor's Degree Computer Science<br />Oakland University<br />Rochester,
-              MI
-            </td>
-          </tr>
-
-          <!-- second table item -->
-          <tr>
-            <td>September 2019<br />-<br />June 200</td>
-            <td>High School Diploma<br />High School High<br />Utica, MI</td>
-          </tr>
-        </table>
       </section>
 
       <!-- extracurricular interests and hobbies arranged in two columns one for text one for an image -->
@@ -207,7 +218,7 @@
         <div class="branding">
           <h5>Rory Strachan 2024</h5>
           <h5>Get in Touch</h5>
-          <button><a href="mailto:sample@gmail.com">Contact</a></button>
+          <button class="contact"><a href="mailto:sample@gmail.com">Contact</a></button>
         </div>
 
         <!-- social medias -->

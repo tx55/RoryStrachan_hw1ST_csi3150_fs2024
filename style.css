@@ -108,7 +108,7 @@ header h2 {
 }
 
 /* header bar button and footer button */
-button {
+.contact {
   background: var(--backup-color);
   padding: 6px 16px;
   border: none;
@@ -130,12 +130,12 @@ button {
 }
 
 /* header bar button hover transition*/
-button:hover {
+.contact:hover {
   background-position: 0 100%;
   color: var(--bg-primary);
 }
 
-button a {
+.contact a {
   color: var(--font-color-primary);
   font-size: 18px;
   text-decoration: none;
@@ -143,7 +143,7 @@ button a {
 }
 
 /* header bar button hover transition for the button text*/
-button:hover a {
+.contact:hover a {
   color: var(--bg-primary);
 }
 
@@ -191,7 +191,8 @@ button:hover a {
   margin-bottom: 35px;
 }
 
-.hero-columns .hero-right-column .resume {
+/* styles all resume buttons */
+.resume {
   background: transparent;
   border: 1px solid var(--font-color-secondary);
   cursor: pointer;
@@ -214,12 +215,12 @@ button:hover a {
 }
 
 /* transition for button */
-.hero-columns .hero-right-column .resume:hover {
+.resume:hover {
   background-position: 0 100%;
   border-color: var(--bg-secondary);
 }
 
-.hero-columns .hero-right-column .resume a {
+.resume a {
   text-decoration: none;
   font-size: 24px;
   color: var(--font-color-secondary);
@@ -300,11 +301,151 @@ button:hover a {
   padding-left: 50px;
 }
 
+/* resume page */
+
+/* resume page overview */
+.resume-overview {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 50px;
+}
+
+.resume-overview .resume-info-left h1 {
+  color: var(--backup-color);
+  margin-bottom: 30px;
+}
+
+.resume-overview .resume-info-left h2 {
+  color: var(--font-color-secondary);
+  margin-bottom: 30px;
+}
+
+.resume-overview .resume-info-left h3 {
+  color: var(--font-color-secondary);
+  margin-bottom: 30px;
+}
+
+.resume-overview .resume-info-left p {
+  color: var(--font-color-primary);
+  margin-bottom: 30px;
+}
+
+.resume-overview .resume-info-right h2 {
+  color: var(--backup-color);
+  margin-bottom: 30px;
+}
+
+.resume-overview .resume-info-right h3 {
+  color: var(--font-color-secondary);
+  margin-bottom: 30px;
+}
+
+.resume-overview .resume-info-right ul li {
+  padding-left: 50px;
+  list-style: none;
+  color: var(--font-color-primary);
+  margin-bottom: 30px;
+}
+
+/* facts page */
+
+.facts {
+  color: var(--font-color-secondary);
+  margin: 50px 50px;
+}
+
+/* book section */
+.favorite-book {
+  padding: 0 50px;
+  margin-bottom: 20px;
+}
+
+.favorite-book h3 {
+  color: var(--font-color-secondary);
+  margin-bottom: 20px;
+}
+
+.favorite-book .book-cols {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.favorite-book .book-cols .book-right {
+  font-size: 24px;
+  color: var(--font-color-primary);
+}
+
+.favorite-book .book-cols .book-right h4 {
+  margin-bottom: 20px;
+}
+
+.favorite-book .book-cols .book-right p {
+  margin-bottom: 20px;
+}
+
+.favorite-book .book-cols .book-right a {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: var(--bg-secondary);
+
+  /* code to do a linear color transition */
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    var(--bg-secondary),
+    var(--bg-secondary) 50%,
+    var(--font-color-secondary) 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 0.3s ease;
+}
+
+/* linear color transition */
+.favorite-book .book-cols .book-right a:hover {
+  background-position: 0 100%;
+}
+
+.favorite-book .book-cols .book-img-left img {
+  height: 400px;
+}
+
+/* audio section */
+.favorite-audio {
+  color: var(--font-color-secondary);
+  padding: 0 50px;
+  margin-bottom: 20px;
+}
+
+.favorite-audio .audio-cols {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.favorite-audio .audio-cols .audio-right img {
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.favorite-audio .audio-cols .audio-right audio {
+  filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+  width: 300px;
+  height: 25px;
+}
+
+/* footer for all pages */
+
 footer {
   margin-bottom: 50px;
 }
 
-footer hr {
+hr {
   color: var(--font-color-secondary);
   width: 90%;
   /* auto to center in page */
@@ -346,8 +487,8 @@ footer hr {
   overflow: hidden;
   background: linear-gradient(
     to right,
-    var(--font-color-primary),
-    var(--font-color-primary) 50%,
+    var(--backup-color),
+    var(--backup-color) 50%,
     var(--font-color-secondary) 50%
   );
   background-clip: text;

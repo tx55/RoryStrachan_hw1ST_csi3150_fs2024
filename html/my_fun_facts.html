@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Strachan Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png" />
 
     <link rel="stylesheet" href="../style.css" />
   </head>
@@ -29,41 +29,33 @@
         <p>|</p>
 
         <!-- call to action contact button -->
-        <button><a href="mailto:sample@gmail.com">Contact</a></button>
+        <button class="contact">
+          <a href="mailto:sample@gmail.com">Contact</a>
+        </button>
       </div>
     </header>
 
     <main>
-      <h2>Some Fun Facts About Me</h2>
+      <h2 class="facts">Some Fun Facts About Me</h2>
 
       <!-- start of book section arranged into columns -->
       <section class="favorite-book">
         <h3>Favorite Book</h3>
 
-        <!-- left column -->
-        <div class="book-img-left">
-          <!-- WIDTH AND HEIGHT STYLING ONLY ADDED TEMPERARLY TO MAKE WEBPAGE LOOK DECENT BEFORE STYLING. THEY WILL BE REMOVED AFTER -->
-          <img
-            src="../assets/img/sample_book.jpg"
-            width="170"
-            height="300"
-            alt="broken image"
-          />
-        </div>
+        <div class="book-cols">
+          <!-- left column -->
+          <div class="book-img-left">
+            <img src="../assets/img/sample_book.jpg" alt="broken image" />
+          </div>
 
-        <!-- right column -->
-        <div class="book-right">
-          <h4>Hamlet</h4>
-          <p>
-            It's so well referenced for a reason. Great text and incredible
-            drama. With most types of media, there's something special about
-            interacting with something so widely loved as it helps you
-            understand everything that was inspired by it to a greater degree.
-          </p>
-          <a
-            href="https://www.barnesandnoble.com/w/hamlet-william-shakespeare/1116670752?ean=9780743477123"
-            >Get it here!</a
-          >
+          <!-- right column -->
+          <div class="book-right">
+            <h4>Hamlet</h4>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente quas, molestiae magnam delectus ratione in hic quam quia cumque dicta maiores fugit, earum corporis vitae sequi? Nam cum magni nisi? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse cum qui non accusamus, harum animi dolore enim, sunt temporibus molestias in atque incidunt obcaecati iste. Molestiae ex cum cumque quia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur alias laudantium maiores accusamus commodi placeat aut qui distinctio voluptatibus aliquid nesciunt sequi voluptas magnam voluptatem voluptates eum, quibusdam ullam iusto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus inventore consectetur facere error hic enim architecto, est dolorum quae ex voluptates quibusdam autem tenetur quas qui perferendis necessitatibus praesentium!
+            </p>
+            <a href="https://www.barnesandnoble.com/w/hamlet-william-shakespeare/1116670752?ean=9780743477123" target="_blank">Get it here!</a>
+          </div>
         </div>
       </section>
 
@@ -71,31 +63,29 @@
       <section class="favorite-audio">
         <h3>Favorite Audio</h3>
 
-        <!-- left column -->
-        <div class="audio-desc-left">
-          <h4>Shigeru Suzuki's Coral Reef</h4>
-          <!-- link opens in a new tab -->
-          <a
-            href="https://youtu.be/-5-kykUC-Zw?si=ORDAXZKfx-W1YNBG"
-            target="_blank"
-            type="audio/mpeg"
-            >(Here is the link to it on Youtube)</a
-          >
-        </div>
+        <div class="audio-cols">
+          <!-- left column -->
+          <div class="audio-desc-left">
+            <h4>Shigeru Suzuki's Coral Reef</h4>
+            <!-- link opens in a new tab -->
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, perferendis? Ab sit est illum officiis voluptatum. Repellendus veniam, exercitationem deleniti officia facilis ipsa adipisci esse ducimus officiis voluptatem, earum natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, ab error. Expedita, pariatur optio! Nemo magnam quisquam nostrum! Et dolores ratione quod ad eos, ducimus nemo assumenda dolor sint aliquam.</p>
+            <a
+              href="https://youtu.be/-5-kykUC-Zw?si=ORDAXZKfx-W1YNBG"
+              target="_blank"
+              type="audio/mpeg"
+              >(Here is the link to it on Youtube)</a
+            >
+          </div>
 
-        <!-- right column (image of album with audio track under it)-->
-        <div class="audio right">
-          <!-- WIDTH AND HEIGHT STYLING ONLY ADDED TEMPERARLY TO MAKE WEBPAGE LOOK DECENT BEFORE STYLING. THEY WILL BE REMOVED AFTER -->
-          <img
-            src="../assets/img/album_cover.jpg"
-            width="300"
-            height="300"
-            alt="Image Broken"
-          />
-          <audio controls>
-            <source src="../assets/audio/coral_reef.mp3" />
-            Unsupported Audio, Sorry.
-          </audio>
+          <!-- right column (image of album with audio track under it)-->
+          <div class="audio-right">
+            <!-- WIDTH AND HEIGHT STYLING ONLY ADDED TEMPERARLY TO MAKE WEBPAGE LOOK DECENT BEFORE STYLING. THEY WILL BE REMOVED AFTER -->
+            <img src="../assets/img/album_cover.jpg" alt="Image Broken" />
+            <audio controls>
+              <source src="../assets/audio/coral_reef.mp3" />
+              Unsupported Audio, Sorry.
+            </audio>
+          </div>
         </div>
       </section>
 
@@ -111,8 +101,6 @@
           <!-- WIDTH AND HEIGHT STYLING ONLY ADDED TEMPERARLY TO MAKE WEBPAGE LOOK DECENT BEFORE STYLING. THEY WILL BE REMOVED AFTER -->
           <iframe
             src="https://www.youtube.com/embed/s0T9QjUbMRo?si=hI-uMo1OUIgizZsJ"
-            width="500"
-            height="300"
           >
             Video Broken, Sorry
           </iframe>
@@ -130,7 +118,9 @@
         <div class="branding">
           <h5>Rory Strachan 2024</h5>
           <h5>Get in Touch</h5>
-          <button><a href="mailto:sample@gmail.com">Contact</a></button>
+          <button class="contact">
+            <a href="mailto:sample@gmail.com">Contact</a>
+          </button>
         </div>
 
         <!-- social medias -->
