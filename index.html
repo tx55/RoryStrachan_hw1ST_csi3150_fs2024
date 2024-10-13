@@ -49,7 +49,9 @@
               </h3>
             </blockquote>
             <button class="resume" type="button">
-              <a href="./assets/other/sample.pdf" download="GFG">Resume</a>
+              <a href="./assets/other/sample.pdf" download="GFG"
+                >Resume Download</a
+              >
             </button>
           </div>
           <!-- left column for image -->
@@ -69,36 +71,34 @@
         </div>
 
         <div class="overview-left">
+          <h4>
+            Hello, my name is Rory Strachan. I am a student at Oakland
+            University working towards a Bachelor's degree in Computer Science
+            and a minor in Applied Math. I am in my third year of University and
+            I am about 80% through my degree.
+          </h4>
 
-          <div class="set-of-cols">
-            <div class="col-1">
-              <h4>
-                Hello, my name is Rory Strachan. I am a student at Oakland
-                University working towards a Bachelor's degree in Computer Science
-                and a minor in Applied Math. I am in my third year of University and
-                I am about 80% through my degree.
-              </h4>
-    
-              <!-- progress bar flair -->
-              <label for="file"><h4>Current Progress Towards My Degree:</h4></label>
-              <progress id="file" value="95" max="128"></progress>
-            </div>
-  
-            <div class="col-2">
-              <h4>
-                I am most proficient with Java, but I also know C, Javascript, HTML,
-                and CSS. I currently have a University job, but I hope to have a job
-                as a software developer.
-              </h4>
-            </div>
+          <br />
+
+          <!-- progress bar flair -->
+          <h4>Current Progress Towards My Degree:</h4>
+
+          <div class="progress">
+            <div class="progress-fill"></div>
           </div>
+
+          <h4>
+            I am most proficient with Java, but I also know C, Javascript, HTML,
+            and CSS. I currently have a University job, but I hope to have a job
+            as a software developer.
+          </h4>
 
           <h4>To know more about me please vist my other pages:</h4>
 
           <!-- these elements move slightly when they are hovered over.
            they are wrapped in span tags so the use has to be directly hovering over them for them to move -->
           <span><a href="./html/my_resume.html">> Resume</a></span>
-          <span></span><a href="./html/my_fun_facts.html">> Fun Facts</a></span>
+          <span><a href="./html/my_fun_facts.html">> Fun Facts</a></span>
         </div>
       </div>
     </main>
@@ -110,11 +110,11 @@
       <!-- footer columns -->
       <div class="footer-columns">
         <!-- final call to action button / copyright-->
-        <h5>Rory Strachan 2024</h5>
-        <h5>Get in Touch</h5>
-        <button class="contact-button">
-          <a href="mailto:sample@gmail.com">Contact</a>
-        </button>
+        <div class="branding">
+          <h5>Rory Strachan 2024</h5>
+          <h5>Get in Touch</h5>
+          <button><a href="mailto:sample@gmail.com">Contact</a></button>
+        </div>
 
         <!-- social medias -->
         <div class="socials">

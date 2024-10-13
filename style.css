@@ -107,8 +107,8 @@ header h2 {
   margin-right: 10px;
 }
 
-/* header bar button */
-.right-side-header > button {
+/* header bar button and footer button */
+button {
   background: var(--backup-color);
   padding: 6px 16px;
   border: none;
@@ -130,12 +130,12 @@ header h2 {
 }
 
 /* header bar button hover transition*/
-.right-side-header > button:hover {
+button:hover {
   background-position: 0 100%;
   color: var(--bg-primary);
 }
 
-.right-side-header > button a {
+button a {
   color: var(--font-color-primary);
   font-size: 18px;
   text-decoration: none;
@@ -143,7 +143,7 @@ header h2 {
 }
 
 /* header bar button hover transition for the button text*/
-.right-side-header > button:hover a {
+button:hover a {
   color: var(--bg-primary);
 }
 
@@ -243,7 +243,7 @@ header h2 {
 
 .section-title {
   margin: 10px 50px 30px;
-  padding: 5px 5px;
+  padding: 10px 10px;
   background: rgba(255, 255, 255, 0.08);
   display: inline-block;
   color: var(--font-color-secondary);
@@ -252,10 +252,10 @@ header h2 {
 }
 
 .overview {
-  padding: 0 50px;
+  padding: 0 100px;
   display: flex;
   gap: 80px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .overview .overview-right img {
@@ -268,20 +268,23 @@ header h2 {
   justify-content: space-between;
 }
 
-.overview .overview-left .set-of-cols {
-  display: flex;
-  justify-content: space-between;
-}
-
 .overview .overview-left h4 {
   color: var(--font-color-primary);
   font-size: 22px;
 }
 
-.overview .overview-left progress {
-  color: var(--font-color-primary);
+.progress {
+  width: 100%;
+  max-width: 500px;
+  background: white;
   border-radius: 2px;
-  width: 25%;
+  height: 15px;
+}
+
+.progress .progress-fill {
+  height: 100%;
+  width: 80%;
+  background: var(--font-color-secondary);
 }
 
 .overview .overview-left a {
@@ -295,4 +298,67 @@ header h2 {
 /* slightly moves text on hover */
 .overview .overview-left a:hover {
   padding-left: 50px;
+}
+
+footer {
+  margin-bottom: 50px;
+}
+
+footer hr {
+  color: var(--font-color-secondary);
+  width: 90%;
+  /* auto to center in page */
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+/* styling for footer */
+.footer-columns {
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-columns .branding {
+  width: 500px;
+  flex-basis: 2;
+}
+
+.footer-columns h5 {
+  color: var(--font-color-primary);
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.footer-columns ul li {
+  list-style: none;
+}
+
+.footer-columns ul li a {
+  text-decoration: none;
+  color: var(--backup-color);
+  font-size: 18px;
+  line-height: 30px;
+
+  /* code to do a linear color transition */
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    var(--font-color-primary),
+    var(--font-color-primary) 50%,
+    var(--font-color-secondary) 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 0.3s ease;
+}
+
+/* linear color transition */
+.footer-columns ul li:hover a {
+  background-position: 0 100%;
 }
