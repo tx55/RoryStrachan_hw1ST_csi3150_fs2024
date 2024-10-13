@@ -156,7 +156,6 @@ header h2 {
 
 /* setting the hero section into two columns. one for text the other for an image */
 .hero-columns {
-  height: 640 px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -199,6 +198,7 @@ header h2 {
   padding: 8px 20px;
   border-radius: 2px;
   width: 200px;
+  margin-bottom: 30px;
 
   /* code to do a linear color transition */
   position: relative;
@@ -243,7 +243,7 @@ header h2 {
 /* styling for overview section (first page) */
 
 .section-title {
-  margin: 10px 50px 30px;
+  margin: 50px 100px;
   padding: 10px 10px;
   background: rgba(255, 255, 255, 0.08);
   display: inline-block;
@@ -274,6 +274,12 @@ header h2 {
   font-size: 22px;
 }
 
+.progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .progress {
   width: 100%;
   max-width: 500px;
@@ -286,6 +292,18 @@ header h2 {
   height: 100%;
   width: 80%;
   background: var(--font-color-secondary);
+}
+
+.progress-wrap h5 {
+  color: var(--backup-color);
+  visibility: hidden;
+  font-size: 40px;
+  transition: all 0.3s ease;
+}
+
+/* reveals % amount on hover */
+.progress-wrap:hover h5 {
+  visibility: visible;
 }
 
 .overview .overview-left a {
@@ -330,6 +348,16 @@ header h2 {
   margin-bottom: 30px;
 }
 
+.resume-overview .resume-info-left .skills {
+  display: flex;
+}
+
+.resume-overview .resume-info-left i {
+  color: var(--backup-color);
+  font-size: 40px;
+}
+
+/* resume page jobs */
 .resume-overview .resume-info-right h2 {
   color: var(--backup-color);
   margin-bottom: 30px;
@@ -340,54 +368,97 @@ header h2 {
   margin-bottom: 30px;
 }
 
-.resume-overview .resume-info-right ul li {
+/* styles left and right side bullets */
+.resume-overview ul li {
   padding-left: 50px;
   list-style: none;
   color: var(--font-color-primary);
   margin-bottom: 30px;
 }
 
+/* resume page education */
+.resume-overview .resume-info-right table {
+  align-items: center;
+}
+
+.resume-overview .resume-info-right table th,
+.resume-overview .resume-info-right table td {
+  padding: 15px;
+  text-align: left;
+  color: var(--font-color-secondary);
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.resume-overview .resume-info-right table th:hover,
+.resume-overview .resume-info-right table td:hover {
+  background-color: var(--bg-secondary);
+  color: var(--bg-primary);
+}
+
+.resume-overview .resume-info-right table td {
+  color: var(--font-color-primary);
+}
+
+/* resume page hobbies */
+.hobbies {
+  margin-bottom: 30px;
+  padding: 100px 50px;
+}
+
+.hobbies h2 {
+  color: var(--backup-color);
+  margin-bottom: 30px;
+}
+
+.hobbies .hobbies-col {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 80px;
+}
+
+.hobbies .hobbies-col .hobbies-col-left {
+  color: var(--font-color-primary);
+  font-size: 20px;
+  line-height: 50px;
+}
+
 /* facts page */
 
 .facts {
   color: var(--font-color-secondary);
-  margin: 50px 50px;
+  margin: 100px 0;
+  font-size: 30px;
 }
 
-/* book section */
-.favorite-book {
+/* facts page sections */
+.facts-page {
   padding: 0 50px;
   margin-bottom: 20px;
 }
 
-.favorite-book h3 {
+.facts-page h3 {
   color: var(--font-color-secondary);
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.facts-page h4 {
+  font-size: 20px;
+  color: var(--bg-secondary);
   margin-bottom: 20px;
 }
 
-.favorite-book .book-cols {
-  display: flex;
-  justify-content: space-between;
-  gap: 80px;
-}
-
-.favorite-book .book-cols .book-right {
-  font-size: 24px;
+.facts-page p {
+  margin-bottom: 20px;
+  font-size: 22px;
   color: var(--font-color-primary);
 }
 
-.favorite-book .book-cols .book-right h4 {
-  margin-bottom: 20px;
-}
-
-.favorite-book .book-cols .book-right p {
-  margin-bottom: 20px;
-}
-
-.favorite-book .book-cols .book-right a {
+.facts-page a {
   margin-bottom: 20px;
   text-decoration: none;
   color: var(--bg-secondary);
+  font-size: 24px;
 
   /* code to do a linear color transition */
   position: relative;
@@ -407,27 +478,23 @@ header h2 {
 }
 
 /* linear color transition */
-.favorite-book .book-cols .book-right a:hover {
+.facts-page a:hover {
   background-position: 0 100%;
 }
 
-.favorite-book .book-cols .book-img-left img {
+/* book section */
+.favorite-book .book-cols, .favorite-audio .audio-cols {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-bottom: 60px;
+}
+
+.favorite-book img {
   height: 400px;
 }
 
 /* audio section */
-.favorite-audio {
-  color: var(--font-color-secondary);
-  padding: 0 50px;
-  margin-bottom: 20px;
-}
-
-.favorite-audio .audio-cols {
-  display: flex;
-  justify-content: space-between;
-  gap: 80px;
-}
-
 .favorite-audio .audio-cols .audio-right img {
   height: 300px;
   margin-bottom: 20px;
@@ -437,6 +504,19 @@ header h2 {
   filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
   width: 300px;
   height: 25px;
+}
+
+/* video */
+.videos .video-itself {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.videos .video-itself iframe {
+  width: 1000px;
+  height: 600px;
 }
 
 /* footer for all pages */
