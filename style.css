@@ -190,7 +190,9 @@ header p {
 }
 
 .hero-columns .hero-left-column img {
-  width: 600px;
+  width: auto;
+  max-width: 600px;
+  object-fit: contain;
 }
 
 /* styles all resume buttons */
@@ -345,10 +347,6 @@ header p {
 .resume-overview .resume-info-left p {
   color: var(--font-color-primary);
   margin-bottom: 30px;
-}
-
-.resume-overview .resume-info-left .skills {
-  display: flex;
 }
 
 .resume-overview .resume-info-left i {
@@ -585,7 +583,9 @@ hr {
 }
 
 /* styling for differing screen sizes*/
-@media screen and (max-width: 1100px) {
+
+/* 1400 px */
+@media screen and (max-width: 1400px) {
   .hero-columns {
     align-items: center;
   }
@@ -599,7 +599,7 @@ hr {
   }
 
   .hero-columns .hero-left-column img {
-    width: 300px;
+    width: 400px;
   }
 
   .resume {
@@ -610,4 +610,241 @@ hr {
     font-size: 18px;
   }
 
+  .section-title {
+    font-size: 24px;
+  }
+
+  .overview .overview-right img {
+    height: 400px;
+  }
+
+  .overview .overview-left h4 {
+    color: var(--font-color-primary);
+    font-size: 20px;
+  }
+
+  .overview .overview-left a {
+    font-size: 24px;
+  }
+
+  .resume-overview .resume-info-left i {
+    color: var(--backup-color);
+    font-size: 30px;
+  }
+
+  .resume-overview .resume-info-right table th,
+  .resume-overview .resume-info-right table td {
+    font-size: 16px;
+  }
+
+  .hobbies .hobbies-col .hobbies-col-left {
+    font-size: 18px;
+  }
+
+  .facts {
+    font-size: 30px;
+  }
+
+  .facts-page h3 {
+    font-size: 24px;
+  }
+
+  .facts-page h4,
+  p,
+  a {
+    font-size: 18px;
+  }
+}
+
+/* 1100px */
+@media screen and (max-width: 1100px) {
+  .hero-columns .hero-right-column h1 {
+    font-size: 22px;
+  }
+
+  .hero-columns .hero-right-column blockquote {
+    font-size: 20px;
+  }
+
+  .hero-columns .hero-left-column img {
+    width: 300px;
+  }
+
+  .resume {
+    width: 150px;
+  }
+
+  .resume a {
+    font-size: 16px;
+  }
+
+  .overview .overview-left h4 {
+    font-size: 18px;
+  }
+
+  .footer-columns h5 {
+    font-size: 24px;
+  }
+
+  .hobbies .hobbies-col .hobbies-col-left {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .facts-page p {
+    font-size: 18px;
+  }
+}
+
+/* 780 px */
+@media screen and (max-width: 780px) {
+  .hero {
+    height: 800px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero-columns {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-columns .hero-right-column {
+    width: 100%;
+    margin-left: 50px;
+  }
+
+  .hero-columns .hero-right-column blockquote {
+    font-size: 14px;
+  }
+
+  .hero-columns .hero-left-column img {
+    width: 500px;
+    margin-top: 50px;
+    margin-left: -125px;
+  }
+
+  .resume-overview {
+    flex-direction: column;
+  }
+
+  .resume-overview .resume-info-left .skills ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .resume-overview .resume-info-left .skills ul li {
+    font-size: 14px;
+  }
+
+  .overview .overview-left h4 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .overview .overview-left a {
+    font-size: 18px;
+  }
+
+  .resume-overview .resume-info-left {
+    font-size: 20px;
+  }
+
+  .hobbies {
+    margin-top: -100px;
+  }
+
+  .facts-page p {
+    font-size: 14px;
+  }
+
+  .videos .video-itself iframe {
+    width: 600px;
+    height: 400px;
+  }
+
+  .hobbies .hobbies-col {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .footer-columns h5 {
+    font-size: 18px;
+  }
+
+  .footer-columns a {
+    font-size: 16px;
+  }
+}
+
+/* 650 px */
+@media screen and (max-width: 650px) {
+  header h2 {
+    font-size: 18px;
+  }
+
+  header .navigation ul li a {
+    font-size: 16px;
+  }
+
+  .hero-columns .hero-right-column {
+    width: 500px;
+  }
+
+  .hero-columns .hero-right-column h1 {
+    font-size: 18px;
+  }
+
+  .hero-columns .hero-right-column blockquote {
+    font-size: 14px;
+  }
+
+  .resume {
+    width: 100px;
+  }
+
+  .resume a {
+    font-size: 12px;
+  }
+
+  .section-title {
+    margin-top: -100px;
+    font-size: 20px;
+  }
+
+  .overview {
+    flex-direction: column;
+    margin-top: -500px;
+  }
+
+  .overview .overview-right img {
+    visibility: hidden;
+  }
+
+  .overview .overview-left h4 {
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .favorite-book img {
+    height: 200px;
+  }
+
+  .favorite-book .book-cols,
+  .favorite-audio .audio-cols {
+    flex-direction: column;
+  }
+
+  .footer-columns h5 {
+    font-size: 14px;
+  }
+
+  .footer-columns .branding {
+    flex-basis: 0;
+  }
+
+  .resume-overview .resume-info-left i {
+    font-size: 20px;
+  }
 }
